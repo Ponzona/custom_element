@@ -1,0 +1,21 @@
+{
+  "name": "custom-address-element",
+  "version": "1.0.0",
+  "description": "Custom element for simple adding address",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ponzona/custom_element.git"
+  },
+  "author": "Dominika Nort",
+  "license": "ISC",
+  "homepage": "https://github.com/Ponzona/custom_element"
+}
