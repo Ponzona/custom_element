@@ -1,7 +1,19 @@
 class Address extends HTMLElement {
 	constructor() {
 		super();
-		console.log('This is works!');
+		this.attachShadow({ mode: 'open' });
+		this.shadowRoot.innerHTML = `
+		<style>
+		.address {
+			font-family: var(--common-font);
+			padding: 20px;
+		}
+		</style>
+		<div class="address">
+		<slot name="title"></slot>
+		<slot name="cityName"></slot>
+		</div>
+		`;
 	}
 }
 

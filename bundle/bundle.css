@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.container {
+  width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.i-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Architects Daughter Regular'), local('ArchitectsDaughter-Regular'), url(https://fonts.gstatic.com/s/architectsdaughter/v10/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvfY4.ttf) format('truetype');
+}
+html {
+  --common-font: 'Architects Daughter', cursive;
+}
+.section {
+  padding: 50px 0;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
