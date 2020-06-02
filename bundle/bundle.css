@@ -30,3 +30,10 @@ h1 {
   text-align: center;
   margin-bottom: 50px;
 }
+.addresses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}

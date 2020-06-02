@@ -4,11 +4,6 @@ class Address extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.innerHTML = `
 		<style>
-		.addresses {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
 		.address {
 			font-family: var(--common-font);
 			width: 220px;
@@ -41,27 +36,14 @@ class Address extends HTMLElement {
 			margin: 0;
 		}
 		</style>
-		<form>
-		<input type="text" placeholder="Enter country name" />
-		<button type="submit">Sumbit</button>
-		</form>
-		<div class="addresses"></div>
-		`;
-		this.addressContainer = this.shadowRoot.querySelector('.addresses');
-		this._renderMap('BB', 'Barbados');
-	}
-
-	_renderMap(countryCode, countryName) {
-		this.template = `
 		<div class="address">
 		<h3>Address</h3>
-		<span>${countryName}</span>
+		<slot name="title"></slot>
 		<div class="stamp">
-		<img src="https://www.countryflags.io/${countryCode}/flat/64.png" />
+		<slot name="code"></slot>
 		</div>
 		</div>
 		`;
-		this.addressContainer.innerHTML += this.template;
 	}
 }
 
