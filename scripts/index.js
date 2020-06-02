@@ -11,13 +11,25 @@ const countries = [
 { code: 'AQ', name: 'Antarctica' }
 ];
 
+const ERROR = {
+	EMPTY_STRING: `<p>Empty request? R u kidding me, human?</p>`,
+	NOT_FOUND: `<p>Country wasn't found. So enjoy this random country!</p>`,
+}
+
 const countriesContainer = document.querySelector('.addresses');
+const infoBlock = document.querySelector('.info');
+
 const form = document.querySelector('.form');
 form.addEventListener('submit', function(evt) {
 	evt.preventDefault();
+	infoBlock.innerHTML = '';
 	const countryName = this.querySelector('input').value.trim();
+	if (!countryName.length) {
+		infoBlock.innerHTML = ERROR.EMPTY_STRING;
+		return;
+	}
+
 	const countryData = findCountryData(countryName);
-	console.log(countryData.name, countryData.code);
 	createElement(countryData);
 });
 
@@ -35,5 +47,6 @@ function findCountryData(country) {
 	if (countryDataIndex > -1) {
 		return countries[countryDataIndex];
 	}
+	infoBlock.innerHTML = ERROR.NOT_FOUND;
 	return countries[Math.floor(countries.length * Math.random())];
 }
