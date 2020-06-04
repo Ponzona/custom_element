@@ -26,7 +26,7 @@ class Address extends HTMLElement {
 			position: absolute;
 			top: 10px;
 			right: 10px;
-			background: radial-gradient(transparent 0px, transparent 3px, white 3px, white);
+			background: radial-gradient(transparent 0px, transparent 3px, #eee 3px, #eee);
 			background-size: 13px 13px;
 			background-position: -5px -5px;
 			transform: rotate(5deg);

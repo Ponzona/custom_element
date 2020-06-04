@@ -280,7 +280,7 @@ function createElement(data) {
 	<span slot="title">${data.name} ${data.code}</span>
 	<img slot="code" src="https://www.countryflags.io/${data.code}/flat/64.png" />
 	`;
-	countriesContainer.appendChild(element);
+	countriesContainer.prepend(element);
 }
 
 function findCountryData(country) {
